@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: twilio-call-logger
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python app.py"
+    envVars:
+      - key: FRONT_INBOX_ID
+        value: your_front_inbox_id
+      - key: FRONT_API_TOKEN
+        value: your_front_api_token
